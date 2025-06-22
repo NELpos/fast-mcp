@@ -5,8 +5,8 @@ import asyncio
 
 # Import shared components and subservers
 from shared.auth import auth_provider
-from servers.calculator import calculator_mcp
-from servers.virustotal import virustotal_mcp
+from servers.calculator.server import calculator_mcp
+from servers.virustoal.server import virustotal_mcp
 
 # Create the main MCP server
 main_mcp = FastMCP("Main MCP Server", auth=auth_provider, mask_error_details=True)
