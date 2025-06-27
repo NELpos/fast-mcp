@@ -7,9 +7,10 @@ import asyncio
 from shared.auth import auth_provider
 from servers.calculator.server import calculator_mcp
 from servers.virustoal.server import virustotal_mcp
+from servers.postgres.server import postgres_mcp
 
 # Create the main MCP server
-main_mcp = FastMCP("Main MCP Server", auth=auth_provider, mask_error_details=True)
+main_mcp = FastMCP("Main MCP Server", mask_error_details=True)
 
 # Resource returning JSON data (dict is auto-serialized)
 @main_mcp.resource("data://config")
@@ -29,8 +30,8 @@ async def get_my_data(ctx: Context) -> dict:
     user_id = access_token.client_id  # From JWT 'sub' or 'client_id' claim
     user_scopes = access_token.scopes
     
-    if "data:read_sensitive" not in user_scopes:
-        raise ToolError("Insufficient permissions: 'data:read_sensitive' scope required.")
+    # if "data:read_sensitive" not in user_scopes:
+    #     raise ToolError("Insufficient permissions: 'data:read_sensitive' scope required.")
     
     return {
         "user": user_id,
@@ -41,7 +42,8 @@ async def get_my_data(ctx: Context) -> dict:
 async def import_subservers():
     await main_mcp.import_server(prefix="calculator", server=calculator_mcp)
     await main_mcp.import_server(prefix="virustotal", server=virustotal_mcp)
+    await main_mcp.import_server(prefix="postgres", server=postgres_mcp)
 
 if __name__ == "__main__":
     asyncio.run(import_subservers())
-    main_mcp.run(transport="streamable-http", host="127.0.0.1", port=9100)
+    main_mcp.run(transport="streamable-http", host="0.0.0.0", port=9100)
