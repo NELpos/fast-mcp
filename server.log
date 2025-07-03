@@ -1,0 +1,28 @@
+[07/04/25 06:44:19] INFO     Imported server CalculatorService    server.py:1571
+                             with prefix 'calculator'                           
+                    INFO     Imported server VirusTotalService    server.py:1571
+                             with prefix 'virustotal'                           
+                    INFO     Imported server PostgresService with server.py:1571
+                             prefix 'postgres'                                  
+                    INFO     Starting MCP server 'Main MCP        server.py:1219
+                             Server' with transport 'sse' on                    
+                             http://0.0.0.0:9100/sse                            
+INFO:     Started server process [94960]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9100 (Press CTRL+C to quit)
+🔍 Session tracking from logs enabled
+INFO:     127.0.0.1:58248 - "POST /sse HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:58248 - "GET /sse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58250 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58250 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58250 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58253 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58254 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58250 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58250 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58253 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58254 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58250 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58272 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58297 - "POST /messages/?session_id=29d8ef7ca26f413e8f1b58781cb997cf HTTP/1.1" 202 Accepted
